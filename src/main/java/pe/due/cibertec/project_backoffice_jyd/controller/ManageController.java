@@ -17,6 +17,16 @@ public class ManageController {
     @Autowired
     ManageService manageService;
 
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
+
+    @GetMapping("/restricted")
+    public String restricted(Model model) {
+        return "restricted";
+    }
+
     @GetMapping("/start")
     public String start(Model model) {
 
@@ -32,6 +42,11 @@ public class ManageController {
         }
         return "manage";
 
+    }
+
+    @GetMapping("/add")
+    public String add(Model model) {
+        return "manage-add";
     }
 
 }

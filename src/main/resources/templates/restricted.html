@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página restringida</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="mt-3 mb-3">
+        <h2>Página restringida</h2>
+    </div>
+
+    <form th:action="@{/manage/logout}" method="post">
+        <button type="button" class="btn btn-primary w-25 mt-3" onclick="location.href='/manage/start'">
+            Ir a página principal
+        </button>
+        <button type="submit" class="btn btn-secondary w-25 mt-3">
+            Cerrar sesión
+        </button>
+    </form>
+
+</div>
+
+</body>
+</html>
